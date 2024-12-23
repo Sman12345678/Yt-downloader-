@@ -7,18 +7,10 @@
 </head>
 <body>
     <h1>YouTube Video Downloader</h1>
-    <form action="/download" method="post">
-        <label for="url">Enter YouTube Video URL:</label>
+    <form method="POST" action="/download">
+        <label for="url">Enter Video URL:</label>
         <input type="text" id="url" name="url" required>
         <button type="submit">Download</button>
     </form>
-
-    {% if message %}
-    <p>{{ message }}</p>
-    {% endif %}
-
-    {% if download_link %}
-    <p><a href="{{ download_link }}" download>Click here to download the video!</a></p>
-    {% endif %}
 </body>
 </html>
